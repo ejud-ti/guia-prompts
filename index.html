@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guia de Prompts para IA · EJUD/TJAM · v4.0</title>
+<title>Guia de Prompts para IA · EJUD/TJAM</title>
 <style>
 :root{
 --verde:#16332f;      /* bloco da capa, banners, barra superior */
@@ -126,10 +126,14 @@ footer{border-top:3px solid var(--salvia);padding-top:18px;color:var(--mut);font
  .pbar{flex-direction:column;align-items:stretch}.cp{width:100%}
 }
 @media print{#top,#side,.cp{display:none}main{margin:0;padding:0}}
+
+/* seção de prompts reunidos */
+table.d td.cc{white-space:nowrap;vertical-align:middle}
+.cp.all{padding:7px 12px;font-size:13px}
 </style>
 </head>
 <body>
-<div id="top"><button id="menu" aria-label="Abrir menu">☰</button><strong>Guia de Prompts para IA · EJUD/TJAM · v4.0</strong></div>
+<div id="top"><button id="menu" aria-label="Abrir menu">☰</button><strong>Guia de Prompts para IA · EJUD/TJAM</strong></div>
 <nav id="side" aria-label="Menu do guia"></nav>
 
 <main>
@@ -143,7 +147,7 @@ footer{border-top:3px solid var(--salvia);padding-top:18px;color:var(--mut);font
 </div>
 
 <div class="hero">
-<p class="kicker">MATERIAL DIDÁTICO · VERSÃO 4.0 · EDIÇÃO UNIFICADA · NOVEMBRO DE 2026</p>
+<p class="kicker">MATERIAL DIDÁTICO · EDIÇÃO UNIFICADA · NOVEMBRO DE 2026</p>
 <h1>Guia de Prompts para IA na Elaboração de Documentos Técnicos</h1>
 <p class="sub">Pesquisar, organizar e revisar com segurança: passo a passo para Psicologia, Serviço Social e Pedagogia no sistema de justiça</p>
 </div>
@@ -1189,6 +1193,26 @@ Verifique o relatório pedagógico abaixo, sem reescrever e sem avaliar a crian�
 <p>Confira a vigência de cada norma no portal oficial antes de citá-la.</p>
 </section>
 
+<!-- ======================= PROMPTS REUNIDOS ======================= -->
+<section id="reunidos" data-menu="Prompts reunidos">
+<div class="partbanner"><p class="kicker">PROMPTS REUNIDOS</p><h2>Todos os prompts em um só lugar</h2></div>
+
+<h3>Trilhas prontas por tipo de documento</h3>
+<p>Siga a sequência da esquerda para a direita. Os blocos B e O são usados quando houver necessidade; os demais, sempre.</p>
+<div class="tw"><table class="d">
+<tr><th>Documento</th><th>Sequência sugerida</th><th>Copiar</th></tr>
+<tr><td><strong>Laudo psicológico</strong></td><td>Passo 0 → P1 + PSI-0 → B1 a B4 (referências são obrigatórias) → O1 + O5 → você escreve → PSI-7, PSI-8, PSI-9, R2 → PSI-3 → R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,B1,B2,B3,B4,O1,O5,PSI-7,PSI-8,PSI-9,R2,PSI-3,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório psicológico</strong></td><td>Passo 0 → P1 + PSI-0 → O1 + O5 → você escreve → PSI-7, PSI-8, PSI-9, R2 → PSI-2 → R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,O1,O5,PSI-7,PSI-8,PSI-9,R2,PSI-2,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Parecer psicológico</strong></td><td>Passo 0 → P1 + PSI-0 → P2 a P4 (se houver documento questionado) → B1 a B4 → você escreve → PSI-7, PSI-9 → PSI-4 → R5, R6 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,P2,P3,P4,B1,B2,B3,B4,PSI-7,PSI-9,PSI-4,R5,R6,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório ou laudo social</strong></td><td>Passo 0 → P1 → O1 a O5 → você escreve → R1, R2, R3 → SS-1 → R4, R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,O1,O2,O3,O4,O5,R1,R2,R3,SS-1,R4,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório pedagógico</strong></td><td>Passo 0 → P1 → O1 + O5 → você escreve → R1, R2 → PED-1 → R4, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,O1,O5,R1,R2,PED-1,R4,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório multiprofissional ou psicossocial</strong></td><td>Passo 0 → P1 (+ PSI-0) → cada área revisa a sua parte → PSI-5 ou SS-2 → R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,PSI-5,SS-2,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Documento recebido de terceiros</strong></td><td>Inspeção fora da IA → P2 → P3 → P4 → conferência com o original</td><td class="cc"><button class="cp all" type="button" data-prompts="P2,P3,P4">Copiar todos</button></td></tr>
+</table></div>
+
+<div id="reunidos-lista"></div>
+</section>
+
 <footer>
 <p><strong>AUTORIA</strong><br>Os prompts são modelos a serem adaptados, não receitas prontas. A responsabilidade ética pelo documento é sempre e integralmente da profissional que o assina.</p>
 <p>Autoria: Profa. Ma. Flávia Gotelip · flaviagotelip@gmail.com<br>Com base nas aulas da Profa. Dra. Cláudia Natividade e da Profa. Dra. Gracielle Feitosa de Loiola<br>Escola Judicial do TJAM · ejud@tjam.jus.br · (92) 2129-6633</p>
@@ -1200,7 +1224,7 @@ Verifique o relatório pedagógico abaixo, sem reescrever e sem avaliar a crian�
 (function(){
   function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-  async function copyText(text, btn){
+  async function copyText(text){
     try{ await navigator.clipboard.writeText(text); }
     catch(e){
       var ta=document.createElement('textarea');
@@ -1209,28 +1233,96 @@ Verifique o relatório pedagógico abaixo, sem reescrever e sem avaliar a crian�
       try{document.execCommand('copy');}catch(_){}
       ta.remove();
     }
-    btn.textContent='Copiado ✓'; btn.classList.add('ok');
-    setTimeout(function(){btn.textContent='Copiar prompt'; btn.classList.remove('ok');},2000);
   }
 
-  var shortcuts=[];
-  document.querySelectorAll('pre.prompt').forEach(function(pre,i){
-    var text=pre.textContent.trim();
-    var label=pre.getAttribute('data-label')||'';
-    var wrap=document.createElement('div'); wrap.className='pbox'; wrap.id='prompt-'+(i+1);
+  function flash(btn,msg,orig){
+    btn.textContent=msg; btn.classList.add('ok');
+    setTimeout(function(){btn.textContent=orig; btn.classList.remove('ok');},2200);
+  }
+
+  // monta uma caixa de prompt (barra verde + botão + texto)
+  function makeBox(label,text){
+    var wrap=document.createElement('div'); wrap.className='pbox';
     var bar=document.createElement('div'); bar.className='pbar';
     var t=document.createElement('span'); t.textContent=label;
     var btn=document.createElement('button'); btn.className='cp'; btn.type='button'; btn.textContent='Copiar prompt';
-    btn.addEventListener('click',function(){copyText(text,btn);});
+    btn.addEventListener('click',async function(){
+      await copyText(text);
+      flash(btn,'Copiado ✓','Copiar prompt');
+    });
     bar.appendChild(t); bar.appendChild(btn);
-    pre.parentNode.insertBefore(wrap,pre);
-    pre.removeAttribute('data-label');
+    var pre=document.createElement('pre');
     pre.innerHTML=esc(text).replace(/\[[^\]\n]+\]/g,function(m){return '<span class="f">'+m+'</span>';});
     wrap.appendChild(bar); wrap.appendChild(pre);
+    return wrap;
+  }
+
+  var prompts=[];    // todos os prompts, na ordem do guia
+  var shortcuts=[];
+  var bank={};       // código -> {titulo, texto}
+
+  document.querySelectorAll('pre.prompt').forEach(function(pre,i){
+    var text=pre.textContent.trim();
+    var label=pre.getAttribute('data-label')||'';
     var short=label.replace(/^PROMPT /,'').replace(/ \(copie, preencha os \[campos\] e cole\)$/,'');
+    var code=short.split(' · ')[0].trim();
+
+    // banner "Quando usar / Onde" que vem antes deste prompt
+    var step=null, el=pre.previousElementSibling;
+    while(el){
+      if(el.classList && el.classList.contains('step')){step=el;break;}
+      el=el.previousElementSibling;
+    }
+    prompts.push({label:label,text:text,step:step,part:pre.closest('section')});
+    bank[code]={titulo:short,texto:text};
+
+    var wrap=makeBox(label,text);
+    wrap.id='prompt-'+(i+1);
+    pre.parentNode.replaceChild(wrap,pre);
     shortcuts.push({id:wrap.id,text:short});
   });
 
+  // seção "Prompts reunidos": monta a lista a partir dos prompts do guia
+  var list=document.getElementById('reunidos-lista');
+  if(list){
+    var lastPart=null, lastStep=null;
+    prompts.forEach(function(p){
+      if(p.part!==lastPart){
+        lastPart=p.part;
+        var pb=p.part.querySelector('.partbanner');
+        if(pb){
+          var b=document.createElement('div'); b.className='partbanner';
+          b.innerHTML='<p class="kicker">'+esc(pb.querySelector('.kicker').textContent)+'</p><h2>'+esc(pb.querySelector('h2').textContent)+'</h2>';
+          list.appendChild(b);
+        }
+      }
+      if(p.step && p.step!==lastStep){
+        lastStep=p.step;
+        var c=p.step.cloneNode(true);
+        c.removeAttribute('id');
+        list.appendChild(c);
+      }
+      list.appendChild(makeBox(p.label,p.text));
+    });
+  }
+
+  // botões "Copiar todos" das trilhas
+  document.querySelectorAll('button[data-prompts]').forEach(function(btn){
+    var codes=btn.getAttribute('data-prompts').split(',').map(function(s){return s.trim();});
+    var found=codes.filter(function(c){return bank[c];});
+    var orig='Copiar todos ('+found.length+')';
+    btn.textContent=orig;
+    btn.title='Copia, na ordem da trilha: '+found.join(', ');
+    btn.addEventListener('click',async function(){
+      var blocos=found.map(function(c){
+        return '==== '+bank[c].titulo+' ====\n'+bank[c].texto;
+      });
+      await copyText(blocos.join('\n\n'));
+      flash(btn,'Copiado ✓ ('+found.length+')',orig);
+    });
+  });
+
+  // menu lateral
   var side=document.getElementById('side');
   var secs=document.querySelectorAll('main section[data-menu]');
   secs.forEach(function(s){
